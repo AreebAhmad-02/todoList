@@ -1,0 +1,24 @@
+body{
+  width:50%;
+  margin : 0 auto;
+}
+header{
+  text-align:center;
+
+}
+
+header h1{
+  font-size: 80px;
+  color: rgb(29, 49, 50);
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+input{
+  font-size: 20px;
+  color: rgb(30, 146, 38);
+  width: 100%;
+  border: none;
+  outline: none ;
+  border-bottom: black 1px solid;
+}
