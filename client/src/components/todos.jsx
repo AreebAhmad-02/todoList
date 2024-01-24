@@ -1,15 +1,27 @@
 import { useEffect } from "react";
 import { getAlltodos } from "../redux/actions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 export const Todos = () => {
     const dispatch = useDispatch();
+    const todos = useSelector(state => state.todos);
+    console.log(todos[0].map((todo) => (todo.data
+
+    )))
     useEffect(() => {
-
-        dispatch()
-
-    },{})
+        dispatch(getAlltodos());
+    }, [])
     return (
-        <div> hello from Todos </div>
+        
+        <article>
+            <ul>
+                {   
+                    todos[0].map((todo) => (
+                        <li>{todo.data }</li>
+                    ))
+                }
+            </ul>
+        </article>
     )
 }
 
