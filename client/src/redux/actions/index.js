@@ -10,8 +10,19 @@ export const addNewTodo = (data) =>async(dispatch) => {
         dispatch({type:ADDNEW_TODO, payload:res.data})
     } catch (error) {
         console.log('ERRROR WHILE CALLING ADD NEWTODO API', error.message);
-
+        
         
     }
 }
 
+export const getAlltodos = () => async (dispatch) => {
+    try {
+        const res = await axios.get(`${API_URL}/todos`);
+        //dispatch({type:ADDNEW_TODO, payload:res.data})
+        
+        
+    } catch (error) {
+        console.log('Error while calling get todos api', error.message)
+        
+    }
+}
